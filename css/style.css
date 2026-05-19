@@ -1,0 +1,51 @@
+body{
+      background: linear-gradient(13deg, #89d2c9 0%, #07545a 100%);
+      min-height: 100vh;
+      padding: 20px;
+}
+
+#noteCard{
+      border-radius: 30px;
+      cursor: pointer;
+      transition:  transform 0.2s, box-shadow 0.2s;
+      animation: spin 1s linear infinite;
+}
+#noteCard:hover {
+      transform: translateY(-5px);     
+      box-shadow:fadeInUp 0.3s ease;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.note-title {
+      font-size: 1.2rem;
+      font-weight: bold;
+      border-bottom: 2px solid rgba(0,0,0,0.1);
+      padding-bottom: 8px;
+}
+
+.note-content {
+      font-size: 0.9rem;
+      line-height: 1.5;
+      max-height: 120px;
+      overflow-y: auto;
+}
+.search-input:focus {
+      box-shadow: none;
+      border-color: #dee2e6;
+}
+.pinned-note{
+      position: absolute;
+      top: 10px;
+      left: 10px;
+      font-size: 0.7rem;
+}

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/bootstrap/bootstrap.rtl.min.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <title>یادداشت‌های چسبی</title>
+</head>
+<body >
+   <div class="container">
+        <!-- هدر -->
+        <div class="title text-center my-4">
+            <h1 class="display-4 text-white fw-bold">
+                یادداشت‌های چسبی
+            </h1>
+            <p class="text-white py-2 lead h5">
+                یادداشت‌های خود را ذخیره، پین و جستجو کنید
+            </p>
+        </div>
+        <!-- افزودن یادداشت -->
+        <div class="card shadow-lg mb-4">
+            <div class="card-body p-4">
+                <h5 class="card-title mb-3">
+                    افزودن یادداشت جدید
+                </h5>
+                <div class="row form-group">
+                    <div class="col-md-4" >
+                        <input type="text" class="form-control" placeholder="عنوان یادداشت... " id="noteTitle">
+                    </div>
+                    <div class="col-md-4" >
+                        <textarea type="text" class="form-control" rows="1" placeholder="متن یادداشت..." id="noteContent"></textarea>
+                    </div>
+                    <div class="col-md-2">
+                        <select class="form-select" name="color" id="noteColor">
+                            <option value="#FFEB3B">🟨 زرد</option>
+                            <option value="#FFCCBC">🟧 نارنجی</option>
+                            <option value="#C8E6C9">🟩 سبز</option>
+                            <option value="#BBDEFB">🟦 آبی</option>
+                            <option value="#E1BEE7">🟪 بنفش</option>
+                            <option value="#FFCDD2">🟥 صورتی</option>
+                        </select>
+                    </div>
+                    <div class="col-md-2" >
+                        <button class="btn btn-primary" id="addNoteBtn">افزودن</button>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+        <!-- جستجو -->
+        <div class="input-group">
+            <input type="text" class="search-input form-control" id="searchInput" placeholder="جستجو در عنوان یا متن یادداشت‌ها...">
+        </div>
+        <!-- گرید یادداشت ها -->
+        <div class="row" id="notesGrid">
+
+        </div>
+
+   </div>
+    <script src="./js/script.js"></script>
+    <script src="./js/bootstarp/bootstrap.bundle.min.js"></script>
+    
+</body>
+</html>
