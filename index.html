@@ -1,48 +1,48 @@
 <!DOCTYPE html>
-<html lang="fa" dir="rtl">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/bootstrap/bootstrap.rtl.min.css">
     <link rel="stylesheet" href="./css/style.css">
-    <title>یادداشت‌های چسبی</title>
+    <title>Sticky Notes App</title>
 </head>
 <body >
    <div class="container">
         <!-- هدر -->
         <div class="title text-center my-4">
             <h1 class="display-4 text-white fw-bold">
-                یادداشت‌های چسبی
+                Sticky Notes
             </h1>
             <p class="text-white py-2 lead h5">
-                یادداشت‌های خود را ذخیره، پین و جستجو کنید
+               Save, pin, and search your notes
             </p>
         </div>
         <!-- افزودن یادداشت -->
         <div class="card shadow-lg mb-4">
             <div class="card-body p-4">
                 <h5 class="card-title mb-3">
-                    افزودن یادداشت جدید
+                   Add New Note
                 </h5>
                 <div class="row form-group">
                     <div class="col-md-4" >
-                        <input type="text" class="form-control" placeholder="عنوان یادداشت... " id="noteTitle">
+                        <input type="text" class="form-control" placeholder="Note title... " id="noteTitle">
                     </div>
                     <div class="col-md-4" >
-                        <textarea type="text" class="form-control" rows="1" placeholder="متن یادداشت..." id="noteContent"></textarea>
+                        <textarea type="text" class="form-control" rows="1" placeholder="Note content..." id="noteContent"></textarea>
                     </div>
                     <div class="col-md-2">
                         <select class="form-select" name="color" id="noteColor">
-                            <option value="#FFEB3B">🟨 زرد</option>
-                            <option value="#FFCCBC">🟧 نارنجی</option>
-                            <option value="#C8E6C9">🟩 سبز</option>
-                            <option value="#BBDEFB">🟦 آبی</option>
-                            <option value="#E1BEE7">🟪 بنفش</option>
-                            <option value="#FFCDD2">🟥 صورتی</option>
+                            <option value="#FFEB3B">🟨 Yellow</option>
+                            <option value="#FFCCBC">🟧 Orange</option>
+                            <option value="#C8E6C9">🟩 Green</option>
+                            <option value="#BBDEFB">🟦 Blue</option>
+                            <option value="#E1BEE7">🟪 Purple</option>
+                            <option value="#FFCDD2">🟥 Pink</option>
                         </select>
                     </div>
                     <div class="col-md-2" >
-                        <button class="btn btn-primary" id="addNoteBtn">افزودن</button>
+                        <button class="btn btn-primary" id="addNoteBtn">Add</button>
                     </div>
 
                 </div>
@@ -51,7 +51,7 @@
         </div>
         <!-- جستجو -->
         <div class="input-group">
-            <input type="text" class="search-input form-control" id="searchInput" placeholder="جستجو در عنوان یا متن یادداشت‌ها...">
+            <input type="text" class="search-input form-control" id="searchInput" placeholder="Search by title or content...">
         </div>
         <!-- گرید یادداشت ها -->
         <div class="row" id="notesGrid">

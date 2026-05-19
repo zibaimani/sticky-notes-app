@@ -26,13 +26,13 @@ function addNote(){
       
 
       if(!noteContent || !noteTitle){
-            alert('عنوان و متن یادداشت را وارد کنید');
+            alert('Please enter a title and some content');
       }else{
             note.unshift({
                   id: new Date().toString(),
                   title: noteTitle,
                   content: noteContent,
-                  date: new Date().toLocaleString('fa-IR'),
+                  date: new Date().toLocaleString('en-US'),
                   color: noteColor,
                   pinned: false
 
@@ -51,7 +51,7 @@ function renderNote() {
       if(note.length === 0){
             notesGrid.innerHTML = `
             <div class="col-12 text-center text-white py-5">                       
-                  <h4 class="mt-3">یادداشتی یافت نشد</h4>
+                  <h4 class="mt-3">No notes found</h4>
             </div>
             `;
             return;
@@ -77,14 +77,14 @@ function renderNote() {
                               </div>
                               <div class="d-flex mt-3 justify-content-center gap-2">
                                     <a class="btn btn-sm btn-success pin-btn" onclick = "togglePin('${note.id}')" >
-                                          پین
+                                          pin
                                     </a>
 
                                     <a class="btn  btn-sm btn-primary edit-btn" onclick = "editNote('${note.id}')">
-                                          ویرایش
+                                          edit
                                     </a>
                                     <a class="btn btn-sm btn-danger delete-btn" onclick="deleteNote('${note.id}')">
-                                          حذف
+                                          delete
                                     </a>
                               </div>
 
@@ -96,7 +96,7 @@ function renderNote() {
 
 
 function deleteNote(id){
-      if(confirm("آیا از حذف مطمئن هستید؟")){           
+      if(confirm("Are you sure you want to delete this note?")){           
             note = note.filter(n => n.id !== id);
             saveNote();
             renderNote();
@@ -107,8 +107,8 @@ function deleteNote(id){
 function editNote(id){
       const findNote = note.find(n => n.id === id);
       if(findNote){
-            const newTitle = prompt('عنوان جدید:', findNote.title);
-            const newContent = prompt('متن جدید:', findNote.content);
+            const newTitle = prompt('New title:', findNote.title);
+            const newContent = prompt('New content:', findNote.content);
             findNote.title = newTitle;
             findNote.content = newContent;
             saveNote();
